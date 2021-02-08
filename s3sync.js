@@ -230,7 +230,7 @@ function fullSync(cb) {
         logger.info("Operation took " + moment.duration(endtime - starttime).humanize() + " to complete");
         if (err) {
             logger.warn("Operation completed with errors");
-            logger.error(err);
+            logger.error(err.message);
             cb(err);
         } else {
             logger.info("Operation completed successfully");
